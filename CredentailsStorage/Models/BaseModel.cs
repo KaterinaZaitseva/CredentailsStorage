@@ -1,0 +1,5 @@
+﻿namespace CredentailsStorage.Models;
+
+public abstract class BaseModel {
+    public int Id { get; set; }
+}
