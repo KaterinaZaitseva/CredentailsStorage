@@ -1,10 +1,10 @@
-﻿using CredentailsStorage.Models;
-using CredentailsStorage.Services.CrudService.Implementation;
-using CredentailsStorage.Services.CrudServices.Interfaces;
+﻿using CredentialsStorage.Models;
+using CredentialsStorage.Services.CrudService.Implementation;
+using CredentialsStorage.Services.CrudServices.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 
-namespace CredentailsStorage.Services.CrudServices.Implementation;
+namespace CredentialsStorage.Services.CrudServices.Implementation;
 
 public class CrudAsyncService<T> : CrudService<T>, ICrudAsyncService<T> where T : BaseModel {
     

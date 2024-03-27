@@ -1,6 +1,6 @@
-﻿using CredentailsStorage.Models;
+﻿using CredentialsStorage.Models;
 
-namespace CredentailsStorage.Services.CrudService.Interfaces;
+namespace CredentialsStorage.Services.CrudService.Interfaces;
 
 public interface ICrudService<T> where T : BaseModel {
     public IEnumerable<T>? GetAll();

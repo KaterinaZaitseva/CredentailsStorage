@@ -1,6 +1,6 @@
-namespace CredentailsStorage.Models;
+namespace CredentialsStorage.Models;
 
-public class ErrorViewModel {
+public class ErrorView {
     public string? RequestId { get; set; }
 
     public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);

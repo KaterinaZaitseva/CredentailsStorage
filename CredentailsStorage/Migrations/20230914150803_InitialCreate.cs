@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace CredentailsStorage.Migrations
+namespace CredentialsStorage.Migrations
 {
     /// <inheritdoc />
     public partial class InitialCreate : Migration

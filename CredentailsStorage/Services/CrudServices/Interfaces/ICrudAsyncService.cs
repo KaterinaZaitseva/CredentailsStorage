@@ -1,8 +1,8 @@
-﻿using CredentailsStorage.Models;
-using CredentailsStorage.Services.CrudService.Interfaces;
+﻿using CredentialsStorage.Models;
+using CredentialsStorage.Services.CrudService.Interfaces;
 using System.Linq.Expressions;
 
-namespace CredentailsStorage.Services.CrudServices.Interfaces;
+namespace CredentialsStorage.Services.CrudServices.Interfaces;
 
 public interface ICrudAsyncService<T> : ICrudService<T> where T : BaseModel {
     public Task<IEnumerable<T>?> GetAllAsync();

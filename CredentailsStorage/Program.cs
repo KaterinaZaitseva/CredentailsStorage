@@ -1,12 +1,14 @@
-using CredentailsStorage.Infrastructure;
-using CredentailsStorage.Services.ModelServices.Interfaces;
+using CredentialsStorage.Infrastructure;
+using CredentialsStorage.Services.ModelServices.Interfaces;
 using WebAPIShopStudy.Services.CrudService.Implementation;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddCors();
+
 builder.Services.AddDbContext<StorageDbContext>();
 
-builder.Services.AddScoped<ICredentailsService, CredentailsService>();
+builder.Services.AddScoped<ICredentialService, CredentialService>();
 
 builder.Services.AddControllersWithViews();
 
@@ -21,6 +23,9 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+
+app.UseCors(builder => builder.WithOrigins("http://localhost:3000")
+    .WithMethods("GET", "POST", "DELETE", "PUT"));
 
 app.UseAuthorization();
 

@@ -1,8 +1,8 @@
-﻿using CredentailsStorage.Models;
+﻿using CredentialsStorage.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
-namespace CredentailsStorage.Controllers;
+namespace CredentialsStorage.Controllers;
 public class HomeController : Controller {
     private readonly ILogger<HomeController> _logger;
 
@@ -20,6 +20,6 @@ public class HomeController : Controller {
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error() {
-        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        return View(new ErrorView { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
 }

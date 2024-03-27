@@ -1,10 +1,10 @@
-﻿using CredentailsStorage.Models;
+﻿using CredentialsStorage.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace CredentailsStorage.Infrastructure;
+namespace CredentialsStorage.Infrastructure;
 
 public class StorageDbContext : DbContext {
-    public DbSet<CredentailModel> Credentails { get; set; }
+    public DbSet<Credential> Credentails { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) {
         optionsBuilder.UseSqlite("Data Source=storage.db");

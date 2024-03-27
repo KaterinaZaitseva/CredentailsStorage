@@ -1,8 +1,8 @@
-﻿using CredentailsStorage.Models;
-using CredentailsStorage.Services.CrudService.Interfaces;
+﻿using CredentialsStorage.Models;
+using CredentialsStorage.Services.CrudService.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
-namespace CredentailsStorage.Services.CrudService.Implementation;
+namespace CredentialsStorage.Services.CrudService.Implementation;
 
 public abstract class CrudService<T> : ICrudService<T> where T : BaseModel {
 

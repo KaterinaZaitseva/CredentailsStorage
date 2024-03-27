@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CredentialsStorage.Migrations
 {
     [DbContext(typeof(StorageDbContext))]
-    [Migration("20230914150803_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20240224204052_AddedServiceNameColumn")]
+    partial class AddedServiceNameColumn
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -19,7 +19,7 @@ namespace CredentialsStorage.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.11");
 
-            modelBuilder.Entity("CredentailsStorage.Models.CredentailModel", b =>
+            modelBuilder.Entity("CredentialsStorage.Models.Credential", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -30,6 +30,10 @@ namespace CredentialsStorage.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("ServiceName")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
